@@ -1,0 +1,5 @@
+# Created at 2023-06-17T00:12:30.581
+Boot Manifest-JAR contains absolute paths in classpath 'D:\kodnext\learnSpherejavafullstack\learnSphere\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

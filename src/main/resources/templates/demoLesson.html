@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<title>Lesson</title>
+</head>
+<body>
+	<form action="/gotolesson" method="post">
+						<div class="alert alert-danger" role="alert" th:text="${error}"
+						th:if="${error}"></div>
+		<div class="container bg-info p-5 mt-4 w-50">
+			<label class="fw-bold">Lesson Id</label><br>
+			<div class="input-group mb-3">
+
+				<input type="number" class="form-control" placeholder="Enter lesson Id"  name="lessonId" required="required">
+				<button class="btn btn-outline-secondary fw-bold" type="submit"
+					id="button-addon2">Get Lesson</button>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

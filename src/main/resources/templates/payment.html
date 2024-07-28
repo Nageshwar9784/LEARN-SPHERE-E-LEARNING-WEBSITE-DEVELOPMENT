@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <title>Start payment</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <form id="payment-form" action="/order" method="get">
+        <h2>verify Payment amount:</h2>
+        <input type="text" name="courseId" id="courseId" th:value="${courseId}" readonly>
+        <input type="text" name="amount" id="amount" th:value="${course}" readonly>
+        <button type="submit"  id="pay-button">Pay</button>
+    </form>
+    <script>
+        $("#payment-form").on("submit", function(e) {
+            e.preventDefault();
+            createOrder();
+        });
+
+        function createOrder() {
+            var amount = $("#amount").val();
+            $.post("/createOrder", { amount: amount })
+                .done(function(order) {
+                    order = JSON.parse(order);
+                    var options = {
+                        "key": "rzp_test_edbf4klUScbdgs",
+                        "amount": order.amount_due.toString(),
+                        "currency": "INR",
+                        "name": "Learn Sphere",
+                        "description": "Test Transaction",
+                        "order_id": order.id,
+
+                        
+                        "handler": function (response) {
+                            verifyPayment(response.razorpay_order_id, response.razorpay_payment_id, response.razorpay_signature);
+                        },
+                        "prefill": {
+                            "name": "Your Name",
+                            "email": "test@example.com",
+                            "contact": "9999999999"
+                        },
+                        "notes": {
+                            "address": "Your Address"
+                        },
+                        "theme": {
+                            "color": "#F37253"
+                        }
+                    };
+                    var rzp1 = new Razorpay(options);
+                    rzp1.open();
+                })
+                .fail(function(error) {
+                    console.error("Error:", error);
+                });
+        }
+
+        function verifyPayment(orderId, paymentId, signature) {
+        	var courseId = $("#courseId").val();
+            $.post("/verify", { orderId: orderId, paymentId: paymentId, signature: signature })
+                .done(function(isValid) {
+                    if (isValid) {
+                        console.log("Payment successful");
+                       
+                    } else {
+                        console.log("Payment failed");
+                    }
+                })
+                .fail(function(error) {
+                    console.error("Error:", error);
+                });
+            
+        }
+        
+    </script>
+</body>
+</html>

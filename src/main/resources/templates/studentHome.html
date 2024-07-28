@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<title>Student Home</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand " href="#"><img src="logo-color.svg" style="width:80px; height:70px"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarNav" aria-controls="navbarNav"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active"><a class="nav-link"
+					href="/studentHome">Home</a></li>
+									<li class="nav-item active"><a class="nav-link"
+					href="/purcheaseCourse">Buy Courses</a></li>
+									<li class="nav-item active"><a class="nav-link"
+					href="/myCourses">My Courses</a></li>
+			</ul>
+		</div>
+		<div class="collapse navbar-collapse justify-content-end">
+			<ul class="navbar-nav mr-5">
+				<li><a class="nav-link material-symbols-outlined" href="/logout">logout</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<header class="jumbotron jumbotron-fluid">
+		<div class="container text-center">
+			<h1 class="display-4">
+				<b>Learn Sphere</b><br>LearnAnything, Anytime
+			</h1>
+			<p class="lead">Expand your knowledge with our wide range of
+				online courses.</p>
+			<!--  <a class="btn btn-primary btn-lg" href="/register" role="button">Get Started</a>-->
+		</div>
+		<div class="bg-light bg-warning text-center mt-1 p-2">
+			<h1>Welcome to Student!</h1>
+		</div>
+	</header>
+	<section class="m-4">
+
+		<div style="border: 3px solid"
+			class=" container d-grid gap-2 col-6 mx-auto pt-4">
+
+			<a href="/purcheaseCourse" class="btn btn-primary py-4 m-2"
+				role="button" data-bs-toggle="button">Buy Courses</a> <a
+				href="/myCourses" class="btn btn-danger  py-4 m-2" role="button"
+				data-bs-toggle="button" aria-pressed="true">My Courses</a>
+
+
+		</div>
+
+	</section>
+
+	<!-- Featured Courses Section -->
+	<section class="container py-5">
+
+		<div class="row">
+			<h2 class="text-center mb-4"> Inspirational Quotes for When You Need a Little Motivation</h2>
+			<div class="col-md-4 mb-4">
+				<div class="card">
+					<div class="card-body">"Take up one idea. Make that one idea
+						your life - think of it, dream of it, live on that idea. Let the
+						brain, muscles, nerves, every part of your body, be full of that
+						idea, and just leave every other idea alone. This is the way to
+						success"- Swami Vivekananda</div>
+				</div>
+			</div>
+			<div class="col-md-4 mb-4">
+				<div class="card">
+
+					<div class="card-body">
+							"Failure will never overtake me if my determination to succeed is strong enough."
+
+"Learning gives creativity, creativity leads to thinking, thinking provides knowledge, and knowledge makes you great." <br>- Dr. A.P.J. Abdul Kalam
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 mb-4">
+				<div class="card">
+
+					<div class="card-body"> "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful." - Albert Schweitzer</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="bg-dark text-white text-center py-3">
+		<p>2023 LearnSphere E-Learning. All rights reserved</p>
+	</footer>
+</body>
+</html>

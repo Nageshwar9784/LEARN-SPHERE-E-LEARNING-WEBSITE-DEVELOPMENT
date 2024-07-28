@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Create Course</title>
+</head>
+<body>
+	
+	<div class="container my-4">
+	  <div class="row justify-content-md-center">
+	    <div class="col col-lg-2">
+	    </div>
+	    <div class="col col-lg-8">
+	    			<form action="/addCourse" method="post" >
+					<fieldset style="background-color:#D1C4E9 ;padding :15px" >
+					    <legend class="text-center">CREATE COURSE</legend>
+					    <div class="mb-3">
+					      <label for="courseId" class="form-label">Course Id</label>
+					      <input type="number" class="form-control" placeholder="Course Id" name="courseId">
+					    </div>
+	 					<div class="mb-3">
+					      <label for="CourseName" class="form-label">Course Name</label>
+					      <input type="text"  class="form-control" placeholder="Course Name" name="coureseName">
+					    </div>
+					    <div class="mb-3">
+					      <label for="coursePrice"class="form-label"> Course Price</label>
+					      <input type="number"  class="form-control" placeholder="Course Price" name="coursePrice">
+					    </div>
+					    <button type="submit" class="btn btn-success">Create Course</button>
+					  </fieldset>
+				</form>
+	    </div>
+  </div>
+
+    <div class="col col-lg-2">
+     
+    </div>
+  </div>
+<script src="https://kit.fontawesome.com/f6b4fb40cc.js" crossorigin="anonymous"></script>	
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</body>
+</html>

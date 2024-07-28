@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<title>ADD LESSON</title>
+</head>
+<body>
+		<div class="container my-4">
+	  <div class="row justify-content-md-center">
+	    <div class="col col-lg-8">
+	    			<div class="card p-4 w-100">
+					<div class="alert alert-success" role="alert" th:text="${success}"
+						th:if="${success}">
+					</div>
+					<div class="alert alert-danger" role="alert" th:text="${error}"
+						th:if="${error}">
+					</div>
+			<form action="/addLesson" method="post" >
+				<fieldset style="background-color:#C8E6C9 ;padding :10px" >
+				    <legend class="text-center">ADD NEW LESSON</legend>
+				    <div class="mb-3">
+				      <label for="courseId" class="form-label">Course Id</label>
+				      <input type="text" class="form-control" placeholder="Course Id" name="courseId">
+				    </div>
+				    <div class="mb-3">
+				      <label for="lessonId" class="form-label">Lesson Id</label>
+				      <input type="text" class="form-control" placeholder="Lesson Id" name="lessonId">
+				    </div>
+ 					<div class="mb-3">
+				      <label for="lessonName" class="form-label">Lesson Name</label>
+				      <input type="text"  class="form-control" placeholder="Lesson Name" name="lessonName">
+				    </div>
+				    <div class="mb-3">
+				      <label for="topics"class="form-label">Lesson Topics</label>
+				      <input type="text"  class="form-control" placeholder="Lesson Topics" name="topics">
+				    </div>
+					<div class="mb-3">
+				      <label for="link"class="form-label">Lesson Video Link</label>
+				      <input type="text"  class="form-control" placeholder="Lesson Topics" name="link">
+				    </div>
+
+				    <button type="submit" class="btn btn-success">Add New Lesson</button>
+				  </fieldset>
+			</form>
+		</div>
+		</div>
+  </div>
+  </div>
+	
+</body>
+</html>
